@@ -164,12 +164,10 @@ const ScreenQuestion: React.FC<ScreenQuestionProps> = ({ onYes, onBack }) => {
                     position: 'fixed', 
                     left: noButtonPosition.x, 
                     top: noButtonPosition.y,
-                    width: noButtonPosition.width,
-                    height: noButtonPosition.height,
                     transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
                     zIndex: 9999
                 }}
-                className="bg-white dark:bg-white/5 backdrop-blur-sm border-2 border-primary/20 text-primary font-bold py-4 px-8 rounded-full shadow-2xl flex items-center justify-center gap-2 text-lg whitespace-nowrap"
+                className="bg-white dark:bg-white/5 backdrop-blur-sm border-2 border-primary/20 text-primary font-bold py-4 px-8 rounded-full shadow-2xl flex items-center justify-center gap-2 text-lg text-center max-w-xs"
             >
                 <span>{getNoButtonText()}</span>
                 <span className="animate-pulse">💕</span>
