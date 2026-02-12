@@ -48,7 +48,7 @@ const ScreenQuestion: React.FC<ScreenQuestionProps> = ({ onYes, onBack }) => {
         </div>
 
         {/* Header */}
-        <header className="relative z-20 px-6 pt-8 pb-4 flex justify-between items-center">
+        <header className="relative z-20 px-6 pt-8 pb-4 flex justify-between items-center" data-aos="fade-down">
              <button onClick={onBack} className="w-12 h-12 rounded-full bg-white dark:bg-background-dark shadow-sm border border-primary/20 flex items-center justify-center text-primary transition-transform active:scale-95 hover:bg-primary/5">
                 <span className="material-icons-round">arrow_back</span>
              </button>
@@ -56,7 +56,7 @@ const ScreenQuestion: React.FC<ScreenQuestionProps> = ({ onYes, onBack }) => {
                 onClick={() => setIsPlaying(!isPlaying)}
                 className={`w-12 h-12 rounded-full shadow-sm border border-primary/20 flex items-center justify-center transition-all active:scale-95 ${isPlaying ? 'bg-primary text-white' : 'bg-white dark:bg-background-dark text-primary hover:bg-primary/5'}`}
              >
-                <span className="material-icons-round text-2xl">{isPlaying ? 'music_off' : 'music_note'}</span>
+                <span className="relative left-[1.5px] top-[-1px] text-xl">🧚</span>
              </button>
         </header>
 
@@ -70,7 +70,7 @@ const ScreenQuestion: React.FC<ScreenQuestionProps> = ({ onYes, onBack }) => {
 
         {/* Main Card */}
         <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pb-12 w-full max-w-md mx-auto">
-             <div className="glass-card w-full rounded-xl p-8 shadow-xl shadow-primary/10 flex flex-col items-center text-center relative overflow-hidden transform transition-all hover:scale-[1.01]">
+             <div className="glass-card w-full rounded-xl p-8 shadow-xl shadow-primary/10 flex flex-col items-center text-center relative overflow-hidden transform transition-all hover:scale-[1.01]" data-aos="zoom-in">
                 {/* Hero Icon */}
                 <div className="w-32 h-32 mb-8 rounded-full bg-gradient-to-tr from-primary/20 to-primary/5 flex items-center justify-center relative">
                     <div className="absolute inset-0 rounded-full border-4 border-white dark:border-background-dark opacity-50"></div>
@@ -89,7 +89,9 @@ const ScreenQuestion: React.FC<ScreenQuestionProps> = ({ onYes, onBack }) => {
                 </h1>
 
                 <p className="text-gray-500 dark:text-gray-300 mb-10 text-lg font-medium max-w-[260px] leading-relaxed">
-                    I'll always love you with all of my heart po ganda 🤗
+                   My first love, my first girlfriend, my first Valentine — every “first” feels perfect because it’s with you. 🤗
+                    
+
                     {/* I promise to buy you chocolates and give you unlimited hugs! 🤗 */}
                 </p>
 
