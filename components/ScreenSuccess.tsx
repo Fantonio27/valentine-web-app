@@ -34,7 +34,7 @@ const ScreenSuccess: React.FC<ScreenSuccessProps> = ({ onRestart }) => {
             <ConfettiParticle key={p.id} delay={p.delay} left={p.left} />
         ))}
 
-        <div className="z-10 text-center space-y-8 p-8 animate-fade-in-up">
+        <div className="z-10 text-center space-y-8 p-8 animate-fade-in-up" data-aos="zoom-in">
             <div className="w-40 h-40 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mx-auto shadow-2xl">
                 <span className="text-8xl animate-bounce">🎉</span>
             </div>
