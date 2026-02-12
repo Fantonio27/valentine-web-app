@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 interface ScreenQuestionProps {
   onYes: () => void;
@@ -31,6 +31,8 @@ const PHRASES = [
 const ScreenQuestion: React.FC<ScreenQuestionProps> = ({ onYes, onBack }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [noCount, setNoCount] = useState(0);
+  const [noButtonPosition, setNoButtonPosition] = useState<{x: number, y: number, width: number, height: number} | null>(null);
+  const noButtonRef = useRef<HTMLButtonElement>(null);
 
   const getNoButtonText = () => {
     return PHRASES[Math.min(noCount, PHRASES.length - 1)];
@@ -106,16 +108,28 @@ const ScreenQuestion: React.FC<ScreenQuestionProps> = ({ onYes, onBack }) => {
                     </button>
                     
                     <button 
-                        onClick={() => {
-                            if (noCount >= PHRASES.length - 1) {
-                                onYes();
-                            } else {
+                        ref={noButtonRef}
+                         onClick={() => {
+                             // Initial click to start flying
+                             if (!noButtonPosition && noButtonRef.current) {
+                                 const rect = noButtonRef.current.getBoundingClientRect();
+                                 setNoButtonPosition({ x: rect.left, y: rect.top, width: rect.width, height: rect.height });
+                                 
+                                 // Small delay to allow rendering at initial position before moving
+                                 setTimeout(() => {
+                                     const x = Math.random() * (window.innerWidth - 100);
+                                     const y = Math.random() * (window.innerHeight - 50);
+                                     setNoButtonPosition(prev => prev ? { ...prev, x, y } : null);
+                                 }, 50);
+                             }
+                             
+                             if (noCount < PHRASES.length - 1) {
                                 setNoCount(noCount + 1);
-                            }
+                             }
                         }}
-                        className="w-full bg-white dark:bg-white/5 border-2 border-primary/20 hover:border-primary text-primary hover:bg-primary/5 font-bold py-4 px-8 rounded-full transform transition-all active:scale-95 flex items-center justify-center gap-2 text-lg"
+                        className={`w-full bg-white dark:bg-white/5 border-2 border-primary/20 hover:border-primary text-primary hover:bg-primary/5 font-bold py-4 px-8 rounded-full transform transition-all active:scale-95 flex items-center justify-center gap-2 text-lg ${noButtonPosition ? 'opacity-0 pointer-events-none' : ''}`}
                     >
-                        <span>{getNoButtonText()}</span>
+                        <span>{noButtonPosition ? PHRASES[0] : getNoButtonText()}</span>
                         <span className="animate-pulse">💕</span>
                     </button>
                 </div>
@@ -126,9 +140,40 @@ const ScreenQuestion: React.FC<ScreenQuestionProps> = ({ onYes, onBack }) => {
              </div>
         </main>
 
+        {/* Flying No Button (Outside the transformed card) */}
+        {noButtonPosition && (
+            <button 
+                onClick={() => {
+                    const x = Math.random() * (window.innerWidth - 100);
+                    const y = Math.random() * (window.innerHeight - 50);
+                    setNoButtonPosition(prev => prev ? { ...prev, x, y } : null);
+                    
+                    if (noCount >= PHRASES.length - 1) {
+                        onYes();
+                    } else {
+                        setNoCount(noCount + 1);
+                    }
+                }}
+                style={{ 
+                    position: 'fixed', 
+                    left: noButtonPosition.x, 
+                    top: noButtonPosition.y,
+                    width: noButtonPosition.width,
+                    height: noButtonPosition.height,
+                    transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+                    zIndex: 9999
+                }}
+                className="bg-white dark:bg-white/5 backdrop-blur-sm border-2 border-primary/20 text-primary font-bold py-4 px-8 rounded-full shadow-2xl flex items-center justify-center gap-2 text-lg whitespace-nowrap"
+            >
+                <span>{getNoButtonText()}</span>
+                <span className="animate-pulse">💕</span>
+            </button>
+        )}
+
         <div className="h-6 w-full z-10"></div>
     </div>
   );
 };
+
 
 export default ScreenQuestion;
