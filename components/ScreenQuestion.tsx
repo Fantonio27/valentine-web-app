@@ -117,8 +117,11 @@ const ScreenQuestion: React.FC<ScreenQuestionProps> = ({ onYes, onBack }) => {
                                  
                                  // Small delay to allow rendering at initial position before moving
                                  setTimeout(() => {
-                                     const x = Math.random() * (window.innerWidth - 100);
-                                     const y = Math.random() * (window.innerHeight - 50);
+                                     const padding = 20; // Safe padding from screen edges
+                                     const maxX = window.innerWidth - rect.width - padding;
+                                     const maxY = window.innerHeight - rect.height - padding;
+                                     const x = Math.random() * (maxX - padding) + padding;
+                                     const y = Math.random() * (maxY - padding) + padding;
                                      setNoButtonPosition(prev => prev ? { ...prev, x, y } : null);
                                  }, 50);
                              }
@@ -144,8 +147,11 @@ const ScreenQuestion: React.FC<ScreenQuestionProps> = ({ onYes, onBack }) => {
         {noButtonPosition && (
             <button 
                 onClick={() => {
-                    const x = Math.random() * (window.innerWidth - 100);
-                    const y = Math.random() * (window.innerHeight - 50);
+                    const padding = 20; // Safe padding from screen edges
+                    const maxX = window.innerWidth - noButtonPosition.width - padding;
+                    const maxY = window.innerHeight - noButtonPosition.height - padding;
+                    const x = Math.random() * (maxX - padding) + padding;
+                    const y = Math.random() * (maxY - padding) + padding;
                     setNoButtonPosition(prev => prev ? { ...prev, x, y } : null);
                     
                     if (noCount >= PHRASES.length - 1) {
