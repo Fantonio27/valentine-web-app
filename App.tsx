@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { AppScreen } from './types';
 import ScreenIntro from './components/ScreenIntro';
 import ScreenPreamble from './components/ScreenPreamble';
@@ -12,6 +14,13 @@ import ScreenSuccess from './components/ScreenSuccess';
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<AppScreen>(AppScreen.INTRO);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const navigateTo = (screen: AppScreen) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setCurrentScreen(screen);
@@ -22,11 +31,9 @@ export default function App() {
       case AppScreen.INTRO:
         return <ScreenIntro onNext={() => navigateTo(AppScreen.PREAMBLE)} />;
       case AppScreen.PREAMBLE:
-        return <ScreenPreamble onNext={() => navigateTo(AppScreen.JOURNEY)} />;
-      case AppScreen.JOURNEY:
-        return <ScreenJourney onNext={() => navigateTo(AppScreen.QUESTION)} onBack={() => navigateTo(AppScreen.PREAMBLE)} />;
+        return <ScreenPreamble onNext={() => navigateTo(AppScreen.QUESTION)} />;
       case AppScreen.QUESTION:
-        return <ScreenQuestion onYes={() => navigateTo(AppScreen.SUCCESS)} onBack={() => navigateTo(AppScreen.JOURNEY)} />;
+        return <ScreenQuestion onYes={() => navigateTo(AppScreen.SUCCESS)} onBack={() => navigateTo(AppScreen.PREAMBLE)} />;
       case AppScreen.SUCCESS:
         return <ScreenSuccess onRestart={() => navigateTo(AppScreen.INTRO)} />;
       default:
