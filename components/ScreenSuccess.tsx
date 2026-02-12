@@ -51,7 +51,7 @@ const ScreenSuccess: React.FC<ScreenSuccessProps> = ({ onRestart }) => {
                 onClick={onRestart}
                 className="mt-12 px-8 py-3 bg-white text-primary rounded-full font-bold shadow-lg hover:bg-gray-100 transition transform hover:scale-105"
             >
-                Watch Again
+                Love you more 💗
             </button>
         </div>
     </div>
