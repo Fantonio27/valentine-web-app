@@ -18,7 +18,7 @@ const ScreenPreamble: React.FC<ScreenPreambleProps> = ({ onNext }) => {
 
       <main className="relative z-10 w-full max-w-md px-6 py-8 flex flex-col justify-between items-center min-h-[800px]">
         {/* Date Label */}
-        <div className="w-full flex justify-center pt-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
+        <div className="w-full flex justify-center pt-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards]" data-aos="fade-down">
             <span className="px-4 py-1 rounded-full bg-white/50 dark:bg-white/10 backdrop-blur-sm text-primary text-xs font-semibold tracking-widest uppercase border border-white/60 shadow-sm">
                 February 14th & 15th
             </span>
@@ -26,7 +26,7 @@ const ScreenPreamble: React.FC<ScreenPreambleProps> = ({ onNext }) => {
 
         {/* Hero Section */}
         <div className="flex-1 flex flex-col items-center justify-center w-full space-y-8">
-            <div className="relative group cursor-pointer perspective-1000">
+            <div className="relative group cursor-pointer perspective-1000" data-aos="zoom-in">
                 <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl transform scale-75 animate-pulse"></div>
                 
                 <div className="relative w-64 h-64 md:w-80 md:h-80 transition-transform duration-700 hover:scale-105">
@@ -41,27 +41,27 @@ const ScreenPreamble: React.FC<ScreenPreambleProps> = ({ onNext }) => {
                 </div>
             </div>
 
-            <div className="glass-card w-full p-8 rounded-xl text-center space-y-6 shadow-sm dark:bg-white/5 dark:border-white/10 transition-all hover:shadow-md">
+            <div className="glass-card w-full p-8 rounded-xl text-center space-y-4 shadow-sm dark:bg-white/5 dark:border-white/10 transition-all hover:shadow-md" data-aos="fade-up">
                 <div className="space-y-3">
                     <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight tracking-tight">
                         I have something <span className="text-primary">special</span> to ask you...
                     </h1>
                     <div className="w-16 h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent mx-auto rounded-full"></div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed font-light">
-                    Every moment with you has been a beautiful adventure. I’ve been waiting for the perfect moment to share what's truly in my heart.
+                <p className="text-gray-600 dark:text-gray-300 text-md leading-relaxed font-light">
+                    Every moment with you is a reminder of how lucky I am to have you. You make my world brighter, my heart fuller, and my life so much more meaningful.
                 </p>
             </div>
         </div>
 
         {/* CTA */}
-        <div className="w-full pt-8 pb-4">
+        <div className="w-full pt-8 pb-4" data-aos="fade-up" data-aos-delay="200">
             <button 
                 onClick={onNext}
                 className="group relative w-full py-5 px-8 bg-primary hover:bg-[#d61e5a] text-white rounded-full transition-all duration-300 transform active:scale-95 shadow-[0_10px_40px_-10px_rgba(238,43,108,0.6)] animate-pulse-glow flex items-center justify-center space-x-3 overflow-hidden"
             >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
-                <span className="text-xl font-bold tracking-wide">Open My Heart</span>
+                <span className="text-xl font-bold tracking-wide">Will you be...</span>
                 <span className="material-icons-round animate-bounce">favorite</span>
             </button>
             <p className="text-center text-gray-400 dark:text-gray-500 text-xs mt-4 tracking-wide font-medium">
