@@ -16,7 +16,7 @@ const ScreenIntro: React.FC<ScreenIntroProps> = ({ onNext }) => {
       <div className="absolute top-1/3 right-10 w-20 h-20 border-4 border-primary/20 rounded-full animate-float-medium pointer-events-none" style={{borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%'}}></div>
 
       {/* Header */}
-      <header className="relative z-10 w-full text-center mt-8 space-y-2">
+      <header className="relative z-10 w-full text-center mt-8 space-y-2" data-aos="fade-down">
         <div className="inline-block bg-white/60 dark:bg-black/20 backdrop-blur-sm px-4 py-1.5 rounded-full border border-primary/20 rotate-2 shadow-sm mb-4">
           <span className="text-xs font-bold text-primary uppercase tracking-widest">For My Love of my Life</span>
         </div>
@@ -27,7 +27,7 @@ const ScreenIntro: React.FC<ScreenIntroProps> = ({ onNext }) => {
       </header>
 
       {/* Main Illustration */}
-      <div className="flex-1 flex items-center justify-center w-full relative z-10">
+      <div className="flex-1 flex items-center justify-center w-full relative z-10" data-aos="zoom-in">
         {/* Blob behind bear */}
         <div className="absolute w-64 h-64 bg-white dark:bg-white/10 rounded-full shadow-xl blur-sm opacity-60 animate-pulse"></div>
         
@@ -56,7 +56,7 @@ const ScreenIntro: React.FC<ScreenIntroProps> = ({ onNext }) => {
       </div>
 
       {/* Action Button */}
-      <div className="w-full mb-8 flex flex-col items-center space-y-4 z-10">
+      <div className="w-full mb-8 flex flex-col items-center space-y-4 z-10" data-aos="fade-up">
         <button 
             onClick={onNext}
             className="group relative w-full max-w-xs"
@@ -81,9 +81,9 @@ const ScreenIntro: React.FC<ScreenIntroProps> = ({ onNext }) => {
       </div>
 
       {/* Decorative Corner Tape */}
-      <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden z-20 pointer-events-none">
-        <div className="bg-primary text-white text-xs font-bold py-1 text-center w-32 transform rotate-45 translate-x-8 translate-y-6 shadow-md border-b-2 border-dashed border-white/30">
-            LOVE
+      <div className="absolute top-[0px] right-[-18px] w-[150px] h-24 overflow-hidden z-20 pointer-events-none">
+        <div className="bg-primary text-white text-xs font-bold py-1 text-center w-32 transform rotate-45 translate-x-8 translate-y-6 shadow-md border-b-2 border-dashed border-white/30 tracking-wider">
+            GURLFIE 🧚
         </div>
       </div>
     </div>
