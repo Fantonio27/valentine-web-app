@@ -15,7 +15,7 @@ const ScreenJourney: React.FC<ScreenJourneyProps> = ({ onNext, onBack }) => {
   return (
     <div className={`bg-background-light dark:bg-background-dark min-h-screen relative transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         {/* Sticky Header */}
-        <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 transition-all duration-300">
+        <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 transition-all duration-300" data-aos="fade-down">
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <button onClick={onBack} className="p-2 -ml-2 rounded-full text-primary hover:bg-primary/10 transition-colors">
@@ -38,7 +38,7 @@ const ScreenJourney: React.FC<ScreenJourneyProps> = ({ onNext, onBack }) => {
             </div>
 
             {/* Hero Text */}
-            <div className="relative z-10 mb-8 text-center px-4 animate-[fadeInUp_0.6s_ease-out]">
+            <div className="relative z-10 mb-8 text-center px-4 animate-[fadeInUp_0.6s_ease-out]" data-aos="fade-up">
                 <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">My Favorite Moments</p>
                 <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white leading-tight">
                     Here are just a few reasons why you are my <span className="text-primary">everything...</span>
@@ -48,7 +48,7 @@ const ScreenJourney: React.FC<ScreenJourneyProps> = ({ onNext, onBack }) => {
             {/* Masonry Grid */}
             <div className="relative z-10 columns-2 gap-4 space-y-4">
                 {/* Card 1 */}
-                <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.1s_both]">
+                <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.1s_both]" data-aos="fade-up" data-aos-delay="100">
                     <div className="bg-white dark:bg-white/5 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div className="relative aspect-[3/4]">
                             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8KvHkm7k9FQBVcsGRtHhY-O8qhCpvadt11jPbyB6EwNj0xhqPUlbLO990l5JkEhPEAIU7IAS5CpX6QD_Y5KQbLDxcUij0Bgn-P4prpVeiBimZX5Qm2VfpcDQKHbNANdSBS7WrCPY9AdHZU0OPyHAL4ToZW_QGNUgKwAH3BiXAzkZiBUNqID4LQheZd_r1fg7PqfVzrew4_yOkaIBbL8xT07JDemAfOqe970XTUqUgzfl9XQDVppN8WrZayZbb7iSCbgDb8z_a34U" alt="Couple" className="w-full h-full object-cover" />
@@ -64,7 +64,7 @@ const ScreenJourney: React.FC<ScreenJourneyProps> = ({ onNext, onBack }) => {
                 </div>
 
                 {/* Card 2 */}
-                <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
+                <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.2s_both]" data-aos="fade-up" data-aos-delay="200">
                     <div className="bg-white dark:bg-white/5 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div className="relative aspect-square">
                             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8LbvIbVWSMrfjEMBK39wp1aZkFf7WGuywbm-kZ8IW6YulBhXDq0eq4tiLp0eI9HCjhHRJpHNx75cpqtF-aQSy-3Q9CCz5WbDXek7cqdyDuAYPIUeVQSUnQNWnB1G3SWPX9BNYLNOXx5honmTecQ6R-gTyBjnit7ZqOwSSuYctBbLt_C-418kkep7hega6--GqSFK4q2cvQCshQ2ofnSI7phPa9kuO8W5BYAOYOVN4GLVDhf4tIfGZGcebjujYDtMl_g3BRumpPrs" alt="Coffee" className="w-full h-full object-cover" />
@@ -79,7 +79,7 @@ const ScreenJourney: React.FC<ScreenJourneyProps> = ({ onNext, onBack }) => {
                 </div>
 
                  {/* Card 3 */}
-                 <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.3s_both]">
+                 <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.3s_both]" data-aos="fade-up" data-aos-delay="300">
                     <div className="bg-primary/5 dark:bg-primary/20 rounded-lg p-6 text-center border border-primary/10 shadow-sm flex flex-col items-center justify-center gap-3">
                         <span className="text-4xl">🥰</span>
                         <p className="text-primary font-bold text-lg">"Your laugh is my favorite sound in the whole world."</p>
@@ -87,7 +87,7 @@ const ScreenJourney: React.FC<ScreenJourneyProps> = ({ onNext, onBack }) => {
                 </div>
 
                 {/* Card 4 */}
-                <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.4s_both]">
+                <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.4s_both]" data-aos="fade-up" data-aos-delay="400">
                     <div className="bg-white dark:bg-white/5 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div className="relative aspect-[4/5]">
                             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-NG4E1-EarGzueOb2fvNPGU4QLY_Rok4pnAYIqa-xyBLRHt5oSUDBA1tZXUh4pMzXySLfXaLQDuMq-I5u7Yx2e6CvNht6vuYZthp0ATHUH29v1jb2_QtZOQ0MZ9n5YTGyoPwWqwqYFXVipdUY9O3giFsoxvWl5_rbxihdbwQPRwM-yjGpWvWl8L4ChqCPWKFi9BYLdJXaf1rVSW2txwdSMUn7QciTAb9rfM-8o50WPfihH22taOWHLyifXX0yhQLcxLjNxwlbjC8" alt="Paris" className="w-full h-full object-cover" />
@@ -104,7 +104,7 @@ const ScreenJourney: React.FC<ScreenJourneyProps> = ({ onNext, onBack }) => {
                 </div>
 
                 {/* Card 5 */}
-                <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.5s_both]">
+                <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.5s_both]" data-aos="fade-up" data-aos-delay="500">
                     <div className="bg-white dark:bg-white/5 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div className="p-5 flex flex-col gap-4">
                             <div className="flex items-center gap-3">
@@ -124,7 +124,7 @@ const ScreenJourney: React.FC<ScreenJourneyProps> = ({ onNext, onBack }) => {
                 </div>
 
                 {/* Card 6 */}
-                <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.6s_both]">
+                <div className="break-inside-avoid mb-4 animate-[fadeInUp_0.8s_ease-out_0.6s_both]" data-aos="fade-up" data-aos-delay="600">
                     <div className="bg-white dark:bg-white/5 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div className="relative aspect-square">
                             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYB-qdZhfbYdMilD2Y429WTuIw1HeUXNXJQlwOa2tKM3Pe0UonzuFB-VJ4HlAJp-rRpQTbZR2R2qKLlLrc71XXq4pynLAjb2g0JxA5oDtYMZpO9Re_B-Mq_Lk-8SA_MpdqbiOEEqi0n0dkXIdD59rXziGDU4n12a8pvYQsR3OGVl1J5TWtkbJvfuexYJARg8R3eE52NGxo4UtX8Oh5JLOstAYawpTgsGtykSOs46R7ehVxJ4YhpZ__GiRN3K7uCiY9L1YSP3X2TM0" alt="Polaroid" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
@@ -140,7 +140,7 @@ const ScreenJourney: React.FC<ScreenJourneyProps> = ({ onNext, onBack }) => {
         </main>
 
         {/* Footer CTA */}
-        <div className="fixed bottom-0 left-0 right-0 p-6 z-50 bg-gradient-to-t from-background-light via-background-light/90 to-transparent dark:from-background-dark dark:via-background-dark/90 pb-8 pt-12">
+        <div className="fixed bottom-0 left-0 right-0 p-6 z-50 bg-gradient-to-t from-background-light via-background-light/90 to-transparent dark:from-background-dark dark:via-background-dark/90 pb-8 pt-12" data-aos="fade-up" data-aos-offset="0">
             <button 
                 onClick={onNext}
                 className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg py-4 px-8 rounded-full shadow-xl shadow-primary/30 transform transition hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 group animate-[fadeInUp_0.8s_ease-out_0.8s_both]"
