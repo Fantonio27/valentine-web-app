@@ -18,7 +18,7 @@ const ScreenPreamble: React.FC<ScreenPreambleProps> = ({ onNext }) => {
 
       <main className="relative z-10 w-full max-w-md px-6 py-8 flex flex-col justify-between items-center min-h-[800px]">
         {/* Date Label */}
-        <div className="w-full flex justify-center pt-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards]" data-aos="fade-down">
+        <div className="w-full flex justify-center pt-4 pb-3 opacity-0 animate-[fadeIn_1s_ease-out_forwards]" data-aos="fade-down">
             <span className="px-4 py-1 rounded-full bg-white/50 dark:bg-white/10 backdrop-blur-sm text-primary text-xs font-semibold tracking-widest uppercase border border-white/60 shadow-sm">
                 February 14th & 15th
             </span>
