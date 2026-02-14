@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { AppScreen } from './types';
@@ -13,7 +13,10 @@ import ScreenSuccess from './components/ScreenSuccess';
 // For this environment, we'll assume a self-contained flow.
 
 export default function App() {
+  const captivatedTrack = new URL('./assets/music/IV OF SPADES - Captivated (Official Audio).mp3', import.meta.url).href;
   const [currentScreen, setCurrentScreen] = useState<AppScreen>(AppScreen.INTRO);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     AOS.init({
@@ -22,15 +25,53 @@ export default function App() {
     });
   }, []);
 
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.volume = 0.6;
+  }, []);
+
+  const toggleMusic = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (audio.paused) {
+      audio.play().then(() => setIsMusicPlaying(true)).catch(() => setIsMusicPlaying(false));
+      return;
+    }
+
+    audio.pause();
+    setIsMusicPlaying(false);
+  };
+
   const navigateTo = (screen: AppScreen) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setCurrentScreen(screen);
   };
 
+  const handleOpenLetter = () => {
+    navigateTo(AppScreen.LOVELETTER);
+  };
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (currentScreen === AppScreen.LOVELETTER) {
+      audio.play().then(() => setIsMusicPlaying(true)).catch(() => setIsMusicPlaying(false));
+      return;
+    }
+
+    audio.pause();
+    audio.currentTime = 0;
+    setIsMusicPlaying(false);
+  }, [currentScreen]);
+
   const renderScreen = () => {
     switch (currentScreen) {
       case AppScreen.INTRO:
-        return <ScreenIntro onNext={() => navigateTo(AppScreen.LOVELETTER)} />;
+        return <ScreenIntro onNext={handleOpenLetter} />;
       // case AppScreen.PREAMBLE:
       //   return <ScreenPreamble onNext={() => navigateTo(AppScreen.LOVELETTER)} />;
       case AppScreen.LOVELETTER:
@@ -46,6 +87,25 @@ export default function App() {
 
   return (
     <div className="min-h-screen w-full relative overflow-hidden">
+        <audio
+          ref={audioRef}
+          src={captivatedTrack}
+          loop
+          preload="auto"
+        />
+        {currentScreen !== AppScreen.INTRO && (
+          <button
+            type="button"
+            onClick={toggleMusic}
+            aria-label={isMusicPlaying ? 'Pause music' : 'Play music'}
+            title={isMusicPlaying ? 'Pause music' : 'Play music'}
+            className="fixed top-4 right-4 z-50 h-10 w-10 rounded-full bg-primary text-white shadow-lg hover:bg-primary-dark flex items-center justify-center"
+          >
+            <span className="material-icons-round text-[18px]">
+              {isMusicPlaying ? 'volume_up' : 'music_note'}
+            </span>
+          </button>
+        )}
         {/* Render the active screen */}
         {renderScreen()}
     </div>
