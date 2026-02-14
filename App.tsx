@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import { AppScreen } from './types';
 import ScreenIntro from './components/ScreenIntro';
 import ScreenPreamble from './components/ScreenPreamble';
+import ScreenLoveLetter from './components/ScreenLoveLetter';
 import ScreenJourney from './components/ScreenJourney';
 import ScreenQuestion from './components/ScreenQuestion';
 import ScreenSuccess from './components/ScreenSuccess';
@@ -29,15 +30,17 @@ export default function App() {
   const renderScreen = () => {
     switch (currentScreen) {
       case AppScreen.INTRO:
-        return <ScreenIntro onNext={() => navigateTo(AppScreen.PREAMBLE)} />;
-      case AppScreen.PREAMBLE:
-        return <ScreenPreamble onNext={() => navigateTo(AppScreen.QUESTION)} />;
-      case AppScreen.QUESTION:
-        return <ScreenQuestion onYes={() => navigateTo(AppScreen.SUCCESS)} onBack={() => navigateTo(AppScreen.PREAMBLE)} />;
-      case AppScreen.SUCCESS:
-        return <ScreenSuccess onRestart={() => navigateTo(AppScreen.INTRO)} />;
+        return <ScreenIntro onNext={() => navigateTo(AppScreen.LOVELETTER)} />;
+      // case AppScreen.PREAMBLE:
+      //   return <ScreenPreamble onNext={() => navigateTo(AppScreen.LOVELETTER)} />;
+      case AppScreen.LOVELETTER:
+        return <ScreenLoveLetter onNext={() => navigateTo(AppScreen.QUESTION)} onBack={() => navigateTo(AppScreen.PREAMBLE)} />;
+      // case AppScreen.QUESTION:
+        // return <ScreenQuestion onYes={() => navigateTo(AppScreen.SUCCESS)} onBack={() => navigateTo(AppScreen.PREAMBLE)} />;
+      // case AppScreen.SUCCESS:
+        // return <ScreenSuccess onRestart={() => navigateTo(AppScreen.INTRO)} />;
       default:
-        return <ScreenIntro onNext={() => navigateTo(AppScreen.PREAMBLE)} />;
+        return <ScreenIntro onNext={() => navigateTo(AppScreen.INTRO)} />;
     }
   };
 
