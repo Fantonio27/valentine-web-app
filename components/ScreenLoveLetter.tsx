@@ -58,7 +58,7 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
                   <span className="material-icons text-xl sm:text-2xl animate-heartbeat">favorite</span>
                 </div>
                 {/* Photo Sticker */}
-                <div className="absolute top-0 right-0 transform rotate-6 hover:rotate-0 transition-transform duration-300 z-10 w-24 sm:w-32 bg-white p-2 pb-8 shadow-md border border-gray-200" style={{ transform: 'translate(20%, -20%) rotate(6deg)' }}>
+                <div className="absolute top-0 right-0 transform rotate-6 hover:rotate-0 transition-transform duration-300 z-10 w-24 sm:w-32 bg-white p-2 pb-4 shadow-md border border-gray-200" style={{ transform: 'translate(20%, -20%) rotate(6deg)' }}>
                   <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
                      <img 
                         src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2940&auto=format&fit=crop" 
@@ -94,39 +94,48 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
                 </div>
 
                 {/* Photo Gallery at Bottom */}
-                <div className="mt-10 sm:mt-16 flex justify-center gap-4 sm:gap-6 relative min-h-[160px] sm:min-h-[200px] opacity-0 animate-fade-in-up" style={{ animationDelay: '2.1s' }}>
-                   {/* Sticker 1 */}
-                   <div className="absolute left-2 sm:left-4 top-4 transform -rotate-6 hover:rotate-0 transition-transform duration-300 z-10 w-24 sm:w-32 bg-white p-1.5 pb-6 shadow-md border border-gray-200 hover:z-30 hover:scale-110">
-                    <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
-                      <img 
-                        src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=2940&auto=format&fit=crop" 
-                        alt="Love" 
-                        className="w-full h-full object-cover"
-                      />
+                <div className="mt-4 sm:mt-4 relative opacity-0 animate-fade-in-up" style={{ animationDelay: '2.1s' }}>
+                  <div className="flex justify-center gap-4 sm:gap-6 relative min-h-[160px] sm:min-h-[200px]">
+                     {/* Sticker 1 */}
+                     <div className="absolute left-2 sm:left-4 top-4 transform -rotate-12 hover:rotate-0 transition-transform duration-300 z-10 w-28 sm:w-36 bg-white p-2 pb-8 shadow-md border border-gray-200 hover:z-30 hover:scale-110">
+                      {/* Tape */}
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-white/50 border-l border-r border-white/60 shadow-sm rotate-[-5deg] backdrop-blur-[1px]"></div>
+                      <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
+                        <img 
+                          src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=2940&auto=format&fit=crop" 
+                          alt="Love" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Sticker 2 */}
-                  <div className="absolute left-1/2 -translate-x-1/2 top-0 transform rotate-3 hover:rotate-0 transition-transform duration-300 z-20 w-28 sm:w-36 bg-white p-1.5 pb-6 shadow-md border border-gray-200 hover:z-30 hover:scale-110">
-                    <div className="w-full aspect-[4/3] bg-gray-100 overflow-hidden relative">
-                      <img 
-                        src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2940&auto=format&fit=crop" 
-                        alt="Happy" 
-                        className="w-full h-full object-cover"
-                      />
+                    {/* Sticker 2 */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-0 transform rotate-2 hover:rotate-0 transition-transform duration-300 z-20 w-32 sm:w-40 bg-white p-2 pb-8 shadow-xl border border-gray-200 hover:z-30 hover:scale-110">
+                       {/* Tape */}
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-white/50 border-l border-r border-white/60 shadow-sm rotate-[2deg] backdrop-blur-[1px]"></div>
+                      <div className="w-full aspect-[4/3] bg-gray-100 overflow-hidden relative">
+                        <img 
+                          src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2940&auto=format&fit=crop" 
+                          alt="Happy" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Sticker 3 */}
-                  <div className="absolute right-2 sm:right-4 top-8 transform rotate-12 hover:rotate-0 transition-transform duration-300 z-10 w-24 sm:w-32 bg-white p-2 pb-8 shadow-md border border-gray-200 hover:z-30 hover:scale-110">
-                    <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
-                      <img 
-                        src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=2940&auto=format&fit=crop" 
-                        alt="Hands" 
-                        className="w-full h-full object-cover"
-                      />
+                    {/* Sticker 3 */}
+                    <div className="absolute right-2 sm:right-4 top-6 transform rotate-12 hover:rotate-0 transition-transform duration-300 z-10 w-28 sm:w-36 bg-white p-2 pb-8 shadow-md border border-gray-200 hover:z-30 hover:scale-110">
+                       {/* Tape */}
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-white/50 border-l border-r border-white/60 shadow-sm rotate-[-2deg] backdrop-blur-[1px]"></div>
+                      <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
+                        <img 
+                          src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=2940&auto=format&fit=crop" 
+                          alt="Hands" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
+                   <p className="text-center font-handwriting text-primary/60 mt-4 text-lg sm:text-xl">Our sweet memories...</p>
                 </div>
               </article>
               
