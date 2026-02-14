@@ -53,27 +53,37 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
             {/* Scrollable Content Area */}
             <div className="flex-grow overflow-y-auto hide-scrollbar p-5 sm:p-8 relative scroll-smooth" ref={containerRef}>
               {/* Paper Header */}
-              <div className="mb-6 sm:mb-8 text-center mt-2">
+              <div className="mb-6 sm:mb-8 text-center mt-2 relative">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 bg-primary/10 rounded-full flex items-center justify-center text-primary">
                   <span className="material-icons text-xl sm:text-2xl animate-heartbeat">favorite</span>
+                </div>
+                {/* Photo Sticker */}
+                <div className="absolute top-0 right-0 transform rotate-6 hover:rotate-0 transition-transform duration-300 z-10 w-24 sm:w-32 bg-white p-2 pb-8 shadow-md border border-gray-200" style={{ transform: 'translate(20%, -20%) rotate(6deg)' }}>
+                  <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
+                     <img 
+                        src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2940&auto=format&fit=crop" 
+                        alt="Us" 
+                        className="w-full h-full object-cover"
+                     />
+                  </div>
                 </div>
               </div>
 
               {/* The Letter */}
-              <article className="text-gray-800 dark:text-gray-200">
+              <article className="text-gray-800 dark:text-gray-200 relative">
                 <h1 className="font-handwriting text-2xl sm:text-4xl text-primary mb-4 sm:mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                   My Dearest Faye,
                 </h1>
-                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '0.6s' }}>
                   Every moment with you feels like a beautiful dream I never want to wake up from. It feels like just yesterday that we first met, yet my soul feels as though it has known yours for a thousand lifetimes.
                 </p>
-                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '0.9s' }}>
                   You are the sun that warms my coldest days and the starlight that guides me through the darkest nights. Your laugh is my favorite melody, and your smile... oh, your smile is the reason I strive to be a better man every single day.
                 </p>
-                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '1.2s' }}>
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '1.2s' }}>
                   I cherish the little things—the way you sip your coffee, how your eyes crinkle when you tell a joke, and the warmth of your hand in mine. Life is an adventure, but it only became a masterpiece when you walked into it.
                 </p>
-                <p className="mb-6 sm:mb-8 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '1.5s' }}>
+                <p className="mb-6 sm:mb-8 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '1.5s' }}>
                   I promise to love you, honor you, and cherish you through all of life's seasons. You are my forever.
                 </p>
                 <div className="mt-8 sm:mt-12 text-right opacity-0 animate-fade-in-up" style={{ animationDelay: '1.8s' }}>
@@ -82,10 +92,46 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
                     <span className="text-3xl sm:text-4xl mt-2 block">France</span>
                   </p>
                 </div>
+
+                {/* Photo Gallery at Bottom */}
+                <div className="mt-10 sm:mt-16 flex justify-center gap-4 sm:gap-6 relative min-h-[160px] sm:min-h-[200px] opacity-0 animate-fade-in-up" style={{ animationDelay: '2.1s' }}>
+                   {/* Sticker 1 */}
+                   <div className="absolute left-2 sm:left-4 top-4 transform -rotate-6 hover:rotate-0 transition-transform duration-300 z-10 w-24 sm:w-32 bg-white p-1.5 pb-6 shadow-md border border-gray-200 hover:z-30 hover:scale-110">
+                    <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
+                      <img 
+                        src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=2940&auto=format&fit=crop" 
+                        alt="Love" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Sticker 2 */}
+                  <div className="absolute left-1/2 -translate-x-1/2 top-0 transform rotate-3 hover:rotate-0 transition-transform duration-300 z-20 w-28 sm:w-36 bg-white p-1.5 pb-6 shadow-md border border-gray-200 hover:z-30 hover:scale-110">
+                    <div className="w-full aspect-[4/3] bg-gray-100 overflow-hidden relative">
+                      <img 
+                        src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2940&auto=format&fit=crop" 
+                        alt="Happy" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Sticker 3 */}
+                  <div className="absolute right-2 sm:right-4 top-8 transform rotate-12 hover:rotate-0 transition-transform duration-300 z-10 w-24 sm:w-32 bg-white p-2 pb-8 shadow-md border border-gray-200 hover:z-30 hover:scale-110">
+                    <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
+                      <img 
+                        src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=2940&auto=format&fit=crop" 
+                        alt="Hands" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
               </article>
               
               {/* Bottom Spacer */}
-              <div className="h-20 sm:h-24"></div>
+              <div className="h-12 sm:h-16"></div>
             </div>
 
             {/* Decorative Sticker */}
