@@ -55,20 +55,22 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
 
               {/* The Letter */}
               <article className="text-gray-800 dark:text-gray-200">
-                <h1 className="font-handwriting text-2xl sm:text-4xl text-primary mb-4 sm:mb-6">My Dearest Faye,</h1>
-                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed">
+                <h1 className="font-handwriting text-2xl sm:text-4xl text-primary mb-4 sm:mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                  My Dearest Faye,
+                </h1>
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
                   Every moment with you feels like a beautiful dream I never want to wake up from. It feels like just yesterday that we first met, yet my soul feels as though it has known yours for a thousand lifetimes.
                 </p>
-                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed">
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
                   You are the sun that warms my coldest days and the starlight that guides me through the darkest nights. Your laugh is my favorite melody, and your smile... oh, your smile is the reason I strive to be a better man every single day.
                 </p>
-                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed">
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '1.2s' }}>
                   I cherish the little things—the way you sip your coffee, how your eyes crinkle when you tell a joke, and the warmth of your hand in mine. Life is an adventure, but it only became a masterpiece when you walked into it.
                 </p>
-                <p className="mb-6 sm:mb-8 font-handwriting text-lg sm:text-2xl leading-relaxed">
+                <p className="mb-6 sm:mb-8 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: '1.5s' }}>
                   I promise to love you, honor you, and cherish you through all of life's seasons. You are my forever.
                 </p>
-                <div className="mt-8 sm:mt-12 text-right">
+                <div className="mt-8 sm:mt-12 text-right opacity-0 animate-fade-in-up" style={{ animationDelay: '1.8s' }}>
                   <p className="text-xl sm:text-3xl font-handwriting text-primary transform -rotate-2 inline-block">
                     Yours forever,<br />
                     <span className="text-3xl sm:text-4xl mt-2 block">France</span>
