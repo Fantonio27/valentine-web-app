@@ -1,6 +1,7 @@
 export enum AppScreen {
     INTRO = 'INTRO',
     PREAMBLE = 'PREAMBLE',
+    LOVELETTER = 'LOVELETTER',
     JOURNEY = 'JOURNEY',
     QUESTION = 'QUESTION',
     SUCCESS = 'SUCCESS'
