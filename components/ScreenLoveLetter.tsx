@@ -55,7 +55,7 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
               {/* Paper Header */}
               <div className="mb-6 sm:mb-8 text-center mt-2">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                  <span className="material-icons text-xl sm:text-2xl">favorite</span>
+                  <span className="material-icons text-xl sm:text-2xl animate-heartbeat">favorite</span>
                 </div>
               </div>
 
