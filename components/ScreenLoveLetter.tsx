@@ -61,7 +61,7 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
                 <div className="absolute top-0 right-0 transform rotate-6 hover:rotate-0 transition-transform duration-300 z-10 w-24 sm:w-32 bg-white p-2 pb-4 shadow-md border border-gray-200" style={{ transform: 'translate(20%, -20%) rotate(6deg)' }}>
                   <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
                      <img 
-                        src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2940&auto=format&fit=crop" 
+                        src="https://res.cloudinary.com/dlawnwftl/image/upload/v1771069101/897f2e0e-43e9-4898-8fc6-eaa4f44ed8a3_qupx4r.jpg" 
                         alt="Us" 
                         className="w-full h-full object-cover"
                      />
@@ -74,19 +74,31 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
                 <h1 className="font-handwriting text-2xl sm:text-4xl text-primary mb-4 sm:mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                   My Dearest Faye,
                 </h1>
-                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '0.6s' }}>
-                  Every moment with you feels like a beautiful dream I never want to wake up from. It feels like just yesterday that we first met, yet my soul feels as though it has known yours for a thousand lifetimes.
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '0.6s' }}>
+                  Happy Valentines po ganda our first valentines together wieee. First of all of thank you po sa love na binibigay mo po saakin.
                 </p>
-                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '0.9s' }}>
-                  You are the sun that warms my coldest days and the starlight that guides me through the darkest nights. Your laugh is my favorite melody, and your smile... oh, your smile is the reason I strive to be a better man every single day.
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '0.9s' }}>
+                  I know po na may problem ka po ngayon and wala ka po sa mood lately but sabi ko po sayo always na hindi po kita susukuan lagi po kitang mamahalin ganda lagi po kitang uunawain alam mo po kung bakit? dahil mahal na mahal po kita di na po ako ulit makaka hanap ng isang katulad mo po ganda.
                 </p>
-                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '1.2s' }}>
-                  I cherish the little things—the way you sip your coffee, how your eyes crinkle when you tell a joke, and the warmth of your hand in mine. Life is an adventure, but it only became a masterpiece when you walked into it.
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '1.2s' }}>
+                  Always po akong happy pag kasama po kita ikaw po ang happy pill ko sa araw araw. Thank you po kay lord and binigay ka po niya saakin and I know na binigay niyo po tayo sa isa’t isa dahil alam niya po na deserve po natin yung isa’t isa.
                 </p>
-                <p className="mb-6 sm:mb-8 font-handwriting text-lg sm:text-2xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '1.5s' }}>
-                  I promise to love you, honor you, and cherish you through all of life's seasons. You are my forever.
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '1.5s' }}>
+                  Sorry po ganda kung minsan po e nakikita mo akong napapagod don’t worry po ganda I’m just resting lang po for a while dahil alam ko pong need mo po ng someone na ma fefeel mo na hindi ka nag iisa. Lagi me ganda sa side mo sa ups and down mo po sa mga accomplishment mo ganda and sa mga bad days mo po ganda I’m always here po for you ganda.
                 </p>
-                <div className="mt-8 sm:mt-12 text-right opacity-0 animate-fade-in-up" style={{ animationDelay: '1.8s' }}>
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '1.8s' }}>
+                  I hope you’re feeling better na ganda yaan mo po lilipas din yang iniisip mo po tandaan mo lang po na mas marami pong nag mamahal sayo ganda pag wala po ikaw sa mood or tahimik po ikaw, walang kulay ang buhay namin.
+                </p>
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '2.1s' }}>
+                  I will stay with you forever ganda always listen to your rant and stories, always be patient with you, always eating with you, more kulitin with you, always make you feel loved, and loving you with all of my heart.
+                </p>
+                <p className="mb-4 sm:mb-6 font-handwriting text-lg sm:text-xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '2.4s' }}>
+                  My wish for our relationship is to more stronger po and more growth for us ganda. Always stay healthy ganda and stay safe always. Don’t forget to drink water po haa I always worry about you po pag di po ikaw nag eaeat kaya po mag eat po ikaw haa wag po ikaw papalipas ng gutom magagalit me grrr.
+                </p>
+                <p className="mb-6 sm:mb-8 font-handwriting text-lg sm:text-xl leading-relaxed opacity-0 animate-fade-in-up relative z-20" style={{ animationDelay: '2.7s' }}>
+                  Ayun lang po ganda more dates for us po ganda and may God bless us with more success and happiness po. Happy Valentines po ganda I Love you very very very much po.
+                </p>
+                <div className="mt-8 sm:mt-12 text-right opacity-0 animate-fade-in-up" style={{ animationDelay: '3.0s' }}>
                   <p className="text-xl sm:text-3xl font-handwriting text-primary transform -rotate-2 inline-block">
                     Yours forever,<br />
                     <span className="text-3xl sm:text-4xl mt-2 block">France</span>
@@ -102,7 +114,7 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-white/50 border-l border-r border-white/60 shadow-sm rotate-[-5deg] backdrop-blur-[1px]"></div>
                       <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
                         <img 
-                          src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=2940&auto=format&fit=crop" 
+                          src="https://res.cloudinary.com/dlawnwftl/image/upload/v1771069101/a2b40236-d3ee-49bc-9e0b-a6938a45bff1_gajtiz.jpg" 
                           alt="Love" 
                           className="w-full h-full object-cover"
                         />
@@ -115,7 +127,7 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-white/50 border-l border-r border-white/60 shadow-sm rotate-[2deg] backdrop-blur-[1px]"></div>
                       <div className="w-full aspect-[4/3] bg-gray-100 overflow-hidden relative">
                         <img 
-                          src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2940&auto=format&fit=crop" 
+                          src="https://res.cloudinary.com/dlawnwftl/image/upload/v1771069102/78864df3-563f-4575-b966-41533790379e_bzyfs0.jpg" 
                           alt="Happy" 
                           className="w-full h-full object-cover"
                         />
@@ -128,7 +140,7 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-white/50 border-l border-r border-white/60 shadow-sm rotate-[-2deg] backdrop-blur-[1px]"></div>
                       <div className="w-full aspect-[3/4] bg-gray-100 overflow-hidden relative">
                         <img 
-                          src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=2940&auto=format&fit=crop" 
+                          src="https://res.cloudinary.com/dlawnwftl/image/upload/v1771069101/0234f6b8-cbdb-4348-8982-a5d04d9f9ea5_ftdh9r.jpg" 
                           alt="Hands" 
                           className="w-full h-full object-cover"
                         />
