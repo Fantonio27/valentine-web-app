@@ -8,6 +8,12 @@ interface ScreenLoveLetterProps {
 const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
+  React.useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTop = 0;
+    }
+  }, []);
+
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-dvh h-dvh font-serif antialiased overflow-hidden flex flex-col items-center justify-center relative">
       {/* Floating Background Hearts Layer */}
@@ -22,7 +28,7 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
       </div>
 
       {/* Main Content Area */}
-      <main className="relative z-10 w-full max-w-md h-full flex flex-col p-4 sm:p-6" ref={containerRef}>
+      <main className="relative z-10 w-full max-w-md h-full flex flex-col p-4 sm:p-6">
         {/* Header / Navigation */}
         <div className="w-full h-10 sm:h-12 flex items-center justify-between shrink-0 mb-2 sm:mb-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
             {onBack ? (
@@ -45,7 +51,7 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
             <div className="absolute inset-2 sm:inset-3 border border-primary/5 dark:border-primary/10 rounded-lg pointer-events-none border-dashed"></div>
             
             {/* Scrollable Content Area */}
-            <div className="flex-grow overflow-y-auto hide-scrollbar p-5 sm:p-8 relative">
+            <div className="flex-grow overflow-y-auto hide-scrollbar p-5 sm:p-8 relative scroll-smooth" ref={containerRef}>
               {/* Paper Header */}
               <div className="mb-6 sm:mb-8 text-center mt-2">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 bg-primary/10 rounded-full flex items-center justify-center text-primary">
@@ -102,14 +108,14 @@ const ScreenLoveLetter: React.FC<ScreenLoveLetterProps> = ({ onNext, onBack }) =
         </div>
 
         {/* Footer / Action Area */}
-        <div className="shrink-0 h-16 sm:h-24 flex items-center justify-center relative z-20">
-          <button 
+        <div className="shrink-0 h-14 sm:h-2 flex items-center justify-center relative z-20">
+          {/* <button 
             onClick={onNext}
             className="bg-primary text-white font-serif font-medium text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-[0_10px_25px_-5px_rgba(238,43,108,0.5)] hover:shadow-[0_15px_35px_-5px_rgba(238,43,108,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 sm:gap-3 group animate-pulse-slow"
           >
             <span>Keep Reading...</span>
             <span className="material-icons text-lg sm:text-xl group-hover:animate-bounce">favorite</span>
-          </button>
+          </button> */}
         </div>
       </main>
     </div>
